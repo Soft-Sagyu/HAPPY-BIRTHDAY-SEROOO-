@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Treasure Hunt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="brand">
+        <div class="title">Birthday Treasure Hunt</div>
+        <div class="subtitle">for the girl who deserves every good thing</div>
+      </div>
+      <div class="level-tag" id="levelLabel">Level 1</div>
+    </div>
+
+    <div class="game-shell">
+      <div class="intro">
+        Find the safe path. Each cleared level unlocks a gift. <br />
+        Right-click to flag a tile.
+      </div>
+
+      <div class="board-wrap">
+        <div class="stats">
+          <div class="stat">
+            <span>Level</span>
+            <strong id="currentLevel">1 / 5</strong>
+          </div>
+          <div class="stat">
+            <span>Safe</span>
+            <strong id="safeCount">0</strong>
+          </div>
+          <div class="stat">
+            <span>Flags</span>
+            <strong id="flagCount">0</strong>
+          </div>
+        </div>
+
+        <div id="board" class="board" aria-label="Minesweeper board"></div>
+
+        <div class="controls">
+          <button id="resetBtn" type="button">Reset Level</button>
+          <button id="restartBtn" class="primary-btn" type="button">Restart Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="giftModal" class="modal" aria-live="polite">
+    <div class="modal-card">
+      <div class="gift-content active">
+        <h2 id="giftTitle" class="gift-title">Level Complete</h2>
+        <div id="giftMessage" class="gift-message"></div>
+
+        <div id="videoContainer" class="video-wrapper hidden"></div>
+
+        <div class="modal-actions">
+          <button id="nextBtn" class="primary-btn" type="button">Next Level</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
